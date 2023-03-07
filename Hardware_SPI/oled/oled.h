@@ -8,16 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define  OLED_RES_Pin GPIO_PIN_4   //RES
-#define  OLED_DC_Pin GPIO_PIN_3    //DC
-#define  OLED_CS_Pin GPIO_PIN_2    //CS
 
-#define OLED_RES_GPIO_Port GPIOA   //RES
-#define OLED_DC_GPIO_Port GPIOA    //DC
-#define OLED_CS_GPIO_Port GPIOA    //CS
 
-#define OLED_RES_Clr() HAL_GPIO_WritePin(OLED_RES_GPIO_Port,OLED_RES_Pin,GPIO_PIN_RESET)//RES
-#define OLED_RES_Set() HAL_GPIO_WritePin(OLED_RES_GPIO_Port,OLED_RES_Pin,GPIO_PIN_SET)
+#define OLED_RES_Clr() HAL_GPIO_WritePin(OLED_RST_GPIO_Port,OLED_RST_Pin,GPIO_PIN_RESET)//RES
+#define OLED_RES_Set() HAL_GPIO_WritePin(OLED_RST_GPIO_Port,OLED_RST_Pin,GPIO_PIN_SET)
 
 #define OLED_DC_Clr() HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,GPIO_PIN_RESET)//DC
 #define OLED_DC_Set() HAL_GPIO_WritePin(OLED_DC_GPIO_Port,OLED_DC_Pin,GPIO_PIN_SET)
@@ -30,7 +24,7 @@
 
 #define uint8_t unsigned char
 #define uint32_t unsigned int
-#define WHICH_SPI &hspi1
+#define WHICH_SPI &hspi2
 
 void OLED_ClearPoint(uint8_t x,uint8_t y);
 void OLED_ColorTurn(uint8_t i);

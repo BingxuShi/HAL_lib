@@ -6,10 +6,9 @@
 "hardware spi\spi.o"
 "hardware spi\stm32f1xx_it.o"
 "hardware spi\stm32f1xx_hal_msp.o"
+"hardware spi\system_stm32f1xx.o"
 "hardware spi\stm32f1xx_hal_gpio_ex.o"
 "hardware spi\stm32f1xx_hal_spi.o"
-"hardware spi\stm32f1xx_hal_tim.o"
-"hardware spi\stm32f1xx_hal_tim_ex.o"
 "hardware spi\stm32f1xx_hal.o"
 "hardware spi\stm32f1xx_hal_rcc.o"
 "hardware spi\stm32f1xx_hal_rcc_ex.o"
@@ -20,8 +19,9 @@
 "hardware spi\stm32f1xx_hal_flash.o"
 "hardware spi\stm32f1xx_hal_flash_ex.o"
 "hardware spi\stm32f1xx_hal_exti.o"
-"hardware spi\system_stm32f1xx.o"
+"hardware spi\stm32f1xx_hal_tim.o"
+"hardware spi\stm32f1xx_hal_tim_ex.o"
 --library_type=microlib --strict --scatter "Hardware SPI\Hardware SPI.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "Hardware SPI.map" -o "Hardware SPI\Hardware SPI.axf"
